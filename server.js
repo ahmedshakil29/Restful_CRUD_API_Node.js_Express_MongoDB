@@ -1,13 +1,17 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const Product = require("./models/productModel");
 
 const app = express();
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 
 app.get("/", function (req, res) {
   res.send("Hello World 2 ");
 });
 
-// app.listen(3000);
+// Database connect
 
 mongoose
   .connect(
