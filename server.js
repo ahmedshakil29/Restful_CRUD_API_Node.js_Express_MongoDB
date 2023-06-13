@@ -7,8 +7,14 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-app.get("/", function (req, res) {
-  res.send("Hello World 2 ");
+//routes
+
+app.get("/", (req, res) => {
+  res.send("Hello NODE API");
+});
+
+app.get("/blog", (req, res) => {
+  res.send("Hello Everyone, My name is Shakil Ahmed");
 });
 
 // Database connect
